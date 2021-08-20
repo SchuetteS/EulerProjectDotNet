@@ -46,3 +46,5 @@ for year in range(1900, 2001):
             sundays += 1
 
 print(sundays)
+
+# Solution: 171

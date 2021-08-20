@@ -109,3 +109,5 @@ for num in numbers:
     sum += num
 
 print(str(sum)[0:10])
+
+# Solution: 5537376230
