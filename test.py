@@ -6,42 +6,43 @@ grid = [
         ['5a', '5b', '5c', '5d', '5e']
         ]
 
-for row in range(len(grid)):
-    print('\n')
-    for column in range(len(grid[row])):
-        print(grid[row][column], end = ' ')
+# for row in range(len(grid)):
+#     print('\n')
+#     for column in range(len(grid[row])):
+#         print(grid[row][column], end = ' ')
 
 print('\n\n--------------')
 
-for column in range(len(grid[row])):
-    print('\n')
-    for row in range(len(grid)):
-        print(grid[row][column], end = ' ')
+# for column in range(len(grid[row])):
+#     print('\n')
+#     for row in range(len(grid)):
+#         print(grid[row][column], end = ' ')
 
 print('\n\n--------------')
 
 # 1b = 1 2
 # 2c = 2 3
 # 3d = 3 4
-for row in range(len(grid) - 3):
-    print('\n')
+# for row in range(len(grid) - 3):
+#     print('\n')
 
-    for column in range(len(grid[row]) - 3):
+#     for column in range(len(grid[row]) - 3):
 
-        print(grid[row][column], end = ' ')
+#         print(grid[row][column], end = ' ')
 
-        for i in range(1, 4):
-            print(grid[row + i][column + i], end = ' ')
+#         for i in range(1, 4):
+#             print(grid[row + i][column + i], end = ' ')
             
 print('\n\n--------------')
 # 1e = 1 5
 # 2d = 2 4
 # 3c = 3 3
 for row in range(len(grid) - 3):
-    for column in grid[row][::-1]: 
-
-        print(column)
+    #for column in grid[row][::-1]: 
+    rowLen = len(grid[row])
+    for column in range(rowLen -1, 2, -1):
+        print('\n')
         print(grid[row][column], end = ' ')
 
         for i in range(1, 4):
-            print(grid[row + i][column + i], end = ' ')
+            print(grid[row + i][column - i], end = ' ')

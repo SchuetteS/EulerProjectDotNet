@@ -105,6 +105,25 @@ def topLeftToBottomRight(grid):
                 greatestProduct = product
     return greatestProduct
 
+def topRightToBottomLeft(grid):
+    greatestProduct = 0
+    for row in range(len(grid) - 3):
+
+        for column in range(len(grid[row]) - 1, 2, -1):
+
+            product = grid[row][column] 
+
+            for i in range(1, 4):
+                product *= grid[row + i][column - i]
+
+            if greatestProduct < product:
+                greatestProduct = product
+    return greatestProduct
+
+
 print(str(leftToRight(grid)))
 print(str(topToBottom(grid)))
 print(str(topLeftToBottomRight(grid)))
+print(str(topRightToBottomLeft(grid)))
+
+# Solution: 70600674 - in topRightToBottomLeft
