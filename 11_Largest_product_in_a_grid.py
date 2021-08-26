@@ -125,5 +125,3 @@ print(str(leftToRight(grid)))
 print(str(topToBottom(grid)))
 print(str(topLeftToBottomRight(grid)))
 print(str(topRightToBottomLeft(grid)))
-
-# Solution: 70600674 - in topRightToBottomLeft

@@ -1,8 +1,3 @@
-# https://www.youtube.com/playlist?list=PLzMcBGfZo4-kE3aF6Y0wNBNih7hWRAU2o
-# https://www.youtube.com/watch?v=G_UYXzGuqvM
-
-import pprint
-
 def printBoard(board):
     for row in range(len(board)):
         
@@ -55,6 +50,9 @@ def isValid(board, num, pos):
     return True
 
 def solve(board):
+    global solve_counter
+    solve_counter += 1
+
     find = findEmpty(board)
     if not find:
         return True
@@ -72,7 +70,11 @@ def solve(board):
 
     return False
 
+
+
 # https://de.wikipedia.org/wiki/Sudoku
+# 10845902 Aufrufe von Solve() zur Lösung
+
 board = [
     [0,3,0,0,0,0,0,0,0],
     [0,0,0,1,9,5,0,0,0],
@@ -85,6 +87,7 @@ board = [
     [0,0,0,0,0,0,0,7,0]
 ]
 
+# 92 Aufrufe von Solve() zur Lösung
 board_2 = [
     [7,8,0,4,0,0,1,2,0],
     [6,0,0,0,7,5,0,0,9],
@@ -97,21 +100,10 @@ board_2 = [
     [0,4,9,2,0,6,0,0,7]
 ]
 
-solvedBoard = [
-        [5,3,4,6,7,8,9,1,2],
-        [6,7,2,1,9,5,3,4,8],
-        [1,9,8,3,4,2,5,6,7],
-        [8,5,9,7,6,1,4,2,3],
-        [4,2,6,8,5,3,7,9,1],
-        [7,1,3,9,2,4,8,5,6],
-        [9,6,1,5,3,7,2,8,4],
-        [2,8,7,4,1,9,6,3,5],
-        [3,4,5,2,8,6,1,7,9]
-]
+solve_counter = 0
 
 printBoard(board_2)
 solve(board_2)
 print('_____________________________________')
 printBoard(board_2)
-# print('_____________________________________')
-# printBoard(solvedBoard)
+print(solve_counter)

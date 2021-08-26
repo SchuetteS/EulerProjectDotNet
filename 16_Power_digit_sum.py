@@ -13,5 +13,3 @@ for character in str(number):
     sum += int(character)
 
 print(sum)
-
-# Solution: 1366

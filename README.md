@@ -9,3 +9,6 @@ Mit Python gelöste Probleme des Project Euler.
 * [Power digit sum](https://projecteuler.net/problem=16)
 * [Counting Sundays](https://projecteuler.net/problem=19)
 * [Factorial digit sum](https://projecteuler.net/problem=20)
+
+
+# Sudoku Solver
