@@ -18,5 +18,3 @@ for char in str(factorial):
     sum += int(char)
 
 print(sum)
-
-# Solution: 648
