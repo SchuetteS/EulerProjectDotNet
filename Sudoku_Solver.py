@@ -75,7 +75,7 @@ def solve(board):
 # https://de.wikipedia.org/wiki/Sudoku
 # 10845902 Aufrufe von Solve() zur Lösung
 
-board = [
+board_1 = [
     [0,3,0,0,0,0,0,0,0],
     [0,0,0,1,9,5,0,0,0],
     [0,0,8,0,0,0,0,6,0],
@@ -100,10 +100,23 @@ board_2 = [
     [0,4,9,2,0,6,0,0,7]
 ]
 
-solve_counter = 0
+board_3 = [
+    [6,9,0,0,0,0,5,7,0],
+    [4,0,0,7,0,6,0,0,0],
+    [7,1,0,0,0,0,3,0,0],
+    [8,0,0,4,0,0,6,0,0],
+    [0,0,0,3,5,2,0,0,0],
+    [0,0,9,0,0,8,0,0,1],
+    [0,0,1,0,0,0,0,8,7],
+    [0,0,0,9,0,3,0,0,4],
+    [0,8,4,0,0,0,0,6,3]
+]
 
-printBoard(board_2)
-solve(board_2)
+solve_counter = 0
+board = board_3
+
+printBoard(board)
+solve(board)
 print('_____________________________________')
-printBoard(board_2)
+printBoard(board)
 print(solve_counter)
