@@ -39,14 +39,6 @@ def isValid(board, num, pos):
             if board[i][j] == num and (i, j) != pos:
                 return False
 
-    # box_x = pos[1] // 3
-    # box_y = pos[0] // 3
-
-    # for i in range(box_y*3, box_y*3 + 3):
-    #     for j in range(box_x*3, box_x*3 + 3):
-    #         if board[i][j] == num and (i,j) != pos:
-    #             return False
-
     return True
 
 def solve(board):
@@ -112,8 +104,20 @@ board_3 = [
     [0,8,4,0,0,0,0,6,3]
 ]
 
+board_4 = [
+    [0,0,4,3,0,0,0,9,6],
+    [0,0,7,9,0,0,0,0,0],
+    [0,0,9,0,0,4,0,3,5],
+    [8,0,0,0,0,7,0,0,0],
+    [5,9,0,0,8,0,0,7,4],
+    [0,0,0,4,0,0,0,0,2],
+    [4,2,0,5,0,0,6,0,0],
+    [0,0,0,0,0,8,2,0,0],
+    [1,7,0,0,0,3,5,0,0]
+]
+
 solve_counter = 0
-board = board_3
+board = board_4
 
 printBoard(board)
 solve(board)
